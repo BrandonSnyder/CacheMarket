@@ -6,7 +6,13 @@ import { QUERY_ITEMS } from "../utils/queries";
 function App ()  {
 
     return (
-
+        <div>
+            <>
+            <container>
+                
+            </container>
+            </>
+        </div>
     title = {type: String, required: true, unqiue: true},
     desc = {type: String, true},
     img = {type: String, required: true},
