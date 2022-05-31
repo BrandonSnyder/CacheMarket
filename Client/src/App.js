@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
+import CreatePostFrom from './components/createPostForm/CreatePostForm'
+import LikedItems from './components/likedItems/LikedItems';
 
 
 const client = new ApolloClient({
@@ -17,7 +19,7 @@ function App() {
           <Routes>
             <Route 
               path="/" 
-              element={<Home />}
+              element={<LikedItems />}
             />
           </Routes>
         </div>
