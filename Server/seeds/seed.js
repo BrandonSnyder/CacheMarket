@@ -1,7 +1,7 @@
 const db = require('../config/connection');
 const { Item } = require('../models');
 
-const techData = require('./techData.json');
+const techData = require('./seedData.json');
 
 db.once('open', async () => {
   await Item.deleteMany({});
