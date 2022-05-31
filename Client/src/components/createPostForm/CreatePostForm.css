@@ -1,0 +1,32 @@
+:root{
+--primary:#949494;
+--secondary: #353333;
+--tertiary: #FFFFFF;
+}
+
+.createPostContainer{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--primary);
+    box-shadow: 5px 5px #353333;
+    align-items: center;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: row;
+    min-width: 60%;
+    margin: 10px auto;
+    justify-content: space-between;
+}
+.inputContainer input{
+ width:80%;
+}
+ span{
+    color: red;
+}
+
+
+/* End of CreatePostForm */

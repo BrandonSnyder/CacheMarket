@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS } from "../utils/queries";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ITEMS);
