@@ -2,10 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import CreatePostForm from './components/createPostForm/CreatePostForm'
+
+import Market from './pages/Market';
+import CreatePostFrom from './components/createPostForm/CreatePostForm'
 import LikedItems from './components/likedItems/LikedItems';
 import CacheNav from "./components/Navbar/Navbar.js";
-import Market from './pages/Market';
 
 const client = new ApolloClient({
   uri: "/graphql",
