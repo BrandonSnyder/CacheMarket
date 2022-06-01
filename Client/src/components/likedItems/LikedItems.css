@@ -1,0 +1,28 @@
+:root{
+    --primary:#949494;
+    --secondary: #353333;
+    --tertiary: #FFFFFF;
+    }
+
+.sectionContainer{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: var(--primary);
+    align-items: center;
+}
+.cardsContainer{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #353333;
+    width: 20%;
+    margin: 10px auto;
+    align-items: center;
+}
+
+
