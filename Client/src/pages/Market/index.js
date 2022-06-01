@@ -5,13 +5,13 @@ import { QUERY_ITEMS } from "../../utils/queries";
 
 function Market() {
   return (
-    <div class = "container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+    <div className = "container">
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
       <>
         <h1>MARKET</h1>
         <p>
@@ -27,9 +27,7 @@ function Market() {
           consequuntur inventore non reprehenderit ex fugit reiciendis odit quos
           vero aliquid, ipsam expedita! Saepe praesentium ullam harum.
         </p>
-        <container>
-
-        </container>
+       
       </>
     </div>
   );
