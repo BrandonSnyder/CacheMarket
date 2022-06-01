@@ -13,6 +13,7 @@ import Market from './pages/Market';
 
 
 
+
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
