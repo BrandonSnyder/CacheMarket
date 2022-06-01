@@ -19,6 +19,7 @@ function App() {
   return (
 
     <ApolloProvider client={client}>
+      <CacheNav />
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
@@ -31,7 +32,7 @@ function App() {
       </Router>
     </ApolloProvider>
 
-    <CacheNav />
+    
 
     //   <ApolloProvider client={client}>
     //     <Router>
