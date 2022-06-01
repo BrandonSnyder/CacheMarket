@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+import Market from './pages/Market';
+import Home from './pages/Home';
 
 import CreatePostFrom from './components/createPostForm/CreatePostForm'
 import LikedItems from './components/likedItems/LikedItems';
