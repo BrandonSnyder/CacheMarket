@@ -2,16 +2,24 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;    
+    height:100%;
 }
 
 .container{
-    position: relative;
-    width: 1200px;
-    height: 300px;
-    margin: 240px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center ;
 }
 
-.container .box{
-    position: relative;]
-    
+.container > .card{
+    display: flex;
+    width: 300px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    align-items: center ;
+    margin: 10px auto;
+
 }

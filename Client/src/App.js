@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
+import Market from './pages/Market';
 import Home from './pages/Home';
 import CreatePostFrom from './components/createPostForm/CreatePostForm'
 import LikedItems from './components/likedItems/LikedItems';
@@ -21,6 +21,7 @@ function App() {
   return (
 
     <ApolloProvider client={client}>
+      <CacheNav />
       <Market/>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
@@ -36,7 +37,7 @@ function App() {
       </Router>
     </ApolloProvider>
 
-    <CacheNav />
+    
 
     //   <ApolloProvider client={client}>
     //     <Router>
