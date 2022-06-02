@@ -10,3 +10,20 @@ query Item {
     }
   }
 `;
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      firstName
+      lastName
+      email
+      savedItems {
+        name
+        description
+        imgLink
+        price
+      }
+    }
+  }
+`;
+

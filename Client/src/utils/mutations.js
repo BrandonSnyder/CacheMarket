@@ -23,3 +23,20 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_ITEM = gql`
+  mutation AddItem(
+    $name: String!
+    $price: Float
+    $imgLink: String!
+    $description: String!
+  ) {
+    addItem(
+      name: $name
+      price: $price
+      imgLink: $imgLink
+      description: $description
+    ) {
+      _id
+    }
+  }
+`;
