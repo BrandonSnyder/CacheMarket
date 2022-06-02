@@ -13,7 +13,11 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     email: String!
+    city: String
+    state: String!
+    phone:String
     item: [Item]
+
   }
   type Query {
     item: [Item]
@@ -21,7 +25,15 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, ): User
+    addUser(
+      firstName: String!,
+       lastName: String!,
+        email: String!,
+         password: String!,
+         city: String,
+         state:String!,
+         phone: String
+          ): User
   }
 `;
 module.exports = typeDefs;
