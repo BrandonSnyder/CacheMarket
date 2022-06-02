@@ -1,12 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Market from './pages/Market';
-import CreatePostFrom from './components/createPostForm/CreatePostForm.js'
-import LikedItems from './components/likedItems/LikedItems.js';
+import CreatePostFrom from './components/createPostForm/CreatePostForm'
+import LikedItems from './components/likedItems/LikedItems';
+
+
 import CacheNav from "./components/Navbar/Navbar.js";
+import Cart from './components/ItemCart/Cart';
 import Signup from './components/signup/Signup.js';
+
+
+
+
 
 
 const client = new ApolloClient({
@@ -18,6 +26,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <CacheNav />
+      <Cart />
       <Market/>
       <Signup/>
       <CreatePostFrom/>
