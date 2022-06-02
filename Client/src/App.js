@@ -1,20 +1,13 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import Market from "./pages/Market";
 
-import Market from './pages/Market';
-import Home from './pages/Home';
-
-import CreatePostFrom from './components/createPostForm/CreatePostForm'
-import LikedItems from './components/likedItems/LikedItems';
-
+import CreatePostFrom from "./components/createPostForm/CreatePostForm";
+import LikedItems from "./components/likedItems/LikedItems";
 
 import CacheNav from "./components/Navbar/Navbar.js";
-import Market from './pages/Market';
-
-
-
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -23,25 +16,17 @@ const client = new ApolloClient({
 
 function App() {
   return (
-
     <ApolloProvider client={client}>
       <CacheNav />
-      <Market/>
+      <Market />
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/" 
-
-              element={<LikedItems />}
-
-            />
+            <Route path="/" element={<LikedItems />} />
           </Routes>
         </div>
       </Router>
     </ApolloProvider>
-
-    
 
     //   <ApolloProvider client={client}>
     //     <Router>
@@ -55,7 +40,6 @@ function App() {
     //       </div>
     //     </Router>
     //   </ApolloProvider>
-
   );
 }
 
