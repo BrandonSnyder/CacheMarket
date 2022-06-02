@@ -1,18 +1,72 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import "./Signup.css";
-// import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 // import Auth from '../utils/auth';
-// import { ADD_USER } from '../utils/mutations';
+import { ADD_USER } from '../../utils/mutations';
 
 function Signup() {
-  
+  const [formState, setFormState] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    city: '',
+    state: '',
+    phone: ''
+  });
+  const [addUser, { error }] = useMutation(ADD_USER);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const { data } = addUser({
+        variables: { ...formState },
+      });
+
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === 'firstName' && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== 'firstName') {
+      setFormState({ ...formState, [name]: value });
+    }
+    if (name === 'lastName' && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== 'lastName') {
+      setFormState({ ...formState, [name]: value });
+    }
+    if (name === 'email' && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== 'email') {
+      setFormState({ ...formState, [name]: value });
+    }
+    if (name === 'password' && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== 'password') {
+      setFormState({ ...formState, [name]: value });
+    }
+    if (name === 'city' && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== 'city') {
+      setFormState({ ...formState, [name]: value });
+    }
+
+  };
+
   return (
     <div className="signupContainer">
       {/* <Link to="/login">← Go to Login</Link> */}
 
       <h2>Signup</h2>
-      <form className='signupForm' onSubmit>
+      <form className='signupForm' onSubmit={handleFormSubmit}>
         <div className="input">
           <label htmlFor="firstName"><span>*</span>First Name:</label>
           <input
@@ -21,7 +75,8 @@ function Signup() {
             name="firstName"
             type="firstName"
             id="firstName"
-            // onChange={handleChange}
+            value={formState.firstName}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
@@ -32,7 +87,8 @@ function Signup() {
             name="lastName"
             type="lastName"
             id="lastName"
-            // onChange={handleChange}
+            value={formState.lastName}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
@@ -43,18 +99,20 @@ function Signup() {
             name="email"
             type="email"
             id="email"
-            // onChange={handleChange}
+            value={formState.email}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
-          <label htmlFor="pwd"><span>*</span>Password:</label>
+          <label htmlFor="password"><span>*</span>Password:</label>
           <input
           className="inputBox"
             placeholder="Password"
             name="password"
             type="password"
-            id="pwd"
-            // onChange={handleChange}
+            id="password"
+            value={formState.password}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
@@ -65,7 +123,8 @@ function Signup() {
             name="city"
             type="text"
             id="city"
-            // onChange={handleChange}
+            value={formState.city}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
@@ -76,7 +135,8 @@ function Signup() {
             name="state"
             type="text"
             id="state"
-            // onChange={handleChange}
+            value={formState.state}
+            onChange={handleChange}
           />
         </div>
         <div className="input">
@@ -87,7 +147,8 @@ function Signup() {
             name="phone"
             type="text"
             id="phone"
-            // onChange={handleChange}
+            value={formState.phone}
+            onChange={handleChange}
           />
         </div>
         <span>* required</span>
@@ -96,5 +157,4 @@ function Signup() {
     </div>
   );
 }
-
 export default Signup;

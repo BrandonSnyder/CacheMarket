@@ -2,16 +2,28 @@
   {
     "firstName": "Fisher",
     "lastName": "Davis",
-    "email": "fisheremail@gmail.com"
+    "email": "fisheremail@gmail.com",
+    "password":"root123",
+    "city":"Atl",
+    "state":"GA",
+    "phone":"1234567980"
   },
   {
     "firstName": "Fisher",
     "lastName": "Davis",
-    "email": "fisheremail@gmail.com"
+    "email": "fisherssemail@gmail.com",
+    "password":"roots123",
+    "city":"Atl",
+    "state":"GA",
+    "phone":"1234167980"
   },
   {
     "firstName": "Fisher",
     "lastName": "Davis",
-    "email": "fisheremail@gmail.com"
+    "email": "fishersemail@gmail.com",
+    "password":"rootas123",
+    "city":"Atl",
+    "state":"GA",
+    "phone":"1134567980"
   }
 ]

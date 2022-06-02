@@ -6,7 +6,6 @@ import "./style.css";
 
 
 function Market() {
-
   const { loading, data } = useQuery(QUERY_ITEMS);
   const items = data?.item || [];
 console.log("these are the items ", items)
