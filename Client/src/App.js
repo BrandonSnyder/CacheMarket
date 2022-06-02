@@ -8,6 +8,8 @@ import LikedItems from './components/likedItems/LikedItems';
 
 
 import CacheNav from "./components/Navbar/Navbar.js";
+import Cart from './components/ItemCart/Cart';
+
 
 
 
@@ -23,6 +25,7 @@ function App() {
 
     <ApolloProvider client={client}>
       <CacheNav />
+      <Cart />
       <Market/>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
