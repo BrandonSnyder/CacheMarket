@@ -18,7 +18,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <CacheNav />
-
       <Market/>
       <Signup/>
       <CreatePostFrom/>
