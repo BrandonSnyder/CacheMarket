@@ -5,6 +5,7 @@ import { QUERY_ITEMS } from "../../utils/queries";
 import "./style.css";
 function Market() {
   return (
+
     
     <section id ="marketItems">
 
@@ -45,16 +46,10 @@ function Market() {
 
         <div className="card"><h3>Item 16</h3><p>CacheMarket<br></br>Price:$$$</p></div>
 
-        
-      
-       
-
-        
-      
     </div>
     </section>
+
   );
 }
 
 export default Market;
-

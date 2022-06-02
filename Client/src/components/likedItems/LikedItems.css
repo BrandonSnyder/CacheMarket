@@ -1,13 +1,16 @@
 :root{
-    --primary:#949494;
+    --primary:#e3e3e3;
     --secondary: #353333;
     --tertiary: #FFFFFF;
+    --dark: #949494;
+    --highlight: #9BD33E;
+    --red: rgb(205, 0, 0);
     }
-
-.sectionContainer{
+.likedItemsContainer{
     display: flex;
     flex-direction: column;
     width: 90%;
+    margin: 30px auto;
     background-color: var(--primary);
     align-items: center;
 }
@@ -16,13 +19,17 @@
     display: flex;
     flex-direction: row;
 }
-.card{
+.likedCard{
     display: flex;
     flex-direction: column;
-    background-color: #353333;
+    background-color: var(--dark);
     width: 20%;
     margin: 10px auto;
     align-items: center;
+    box-shadow: 5px 5px;
+}
+.likedCard:hover{
+    box-shadow: 2px 2px;
 }
 
 
