@@ -16,9 +16,7 @@ const itemSchema = new Schema({
     price:{
         type:Number,
         required:true,
-    },
-
-
+    }
 })
 
 const Item = model('Item', itemSchema);
