@@ -32,7 +32,7 @@ function Signup() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
+    console.log(name, value);
     if (name === "firstName" && value.length <= 280) {
       setFormState({ ...formState, [name]: value });
     } else if (name !== "firstName") {

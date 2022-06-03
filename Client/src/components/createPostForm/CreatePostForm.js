@@ -6,10 +6,10 @@ import { ADD_ITEM } from "../../utils/mutations";
 
 function CreatePostForm() {
   const [postState, setPostState] = useState({
-    name: "",
+    product: "",
     description: "",
-    imgLink: "",
     price: "",
+    imgLink: "",
   });
 
   const [addItem, { error }] = useMutation(ADD_ITEM);
@@ -20,19 +20,18 @@ function CreatePostForm() {
       const { data } = addItem({
         variables: { ...postState },
       });
-
       window.location.reload();
     } catch (err) {
-      console.error(err);
+      console.error("not submitting");
     }
   };
 
   const handlePostChange = (event) => {
     const { name, value } = event.target;
     console.log(name, value);
-    if (name === "name" && value.length <= 280) {
+    if (name === "product" && value.length <= 280) {
       setPostState({ ...postState, [name]: value });
-    } else if (name !== "name") {
+    } else if (name !== "product") {
       setPostState({ ...postState, [name]: value });
     }
     if (name === "description" && value.length <= 280) {
@@ -50,6 +49,7 @@ function CreatePostForm() {
     } else if (name !== "price") {
       setPostState({ ...postState, [name]: value });
     }
+    console.log(postState)
   };
 
   return (
@@ -57,15 +57,15 @@ function CreatePostForm() {
       <h1>Create Post</h1>
       <form className="signupForm" onSubmit={handlePostSubmit}>
         <div className="input">
-          <label htmlFor="Name">
-            <span>*</span>Name:
+          <label htmlFor="Product">
+            <span>*</span>Product Name:
           </label>
           <input
-            placeholder="Name of Product"
-            name="name"
+            placeholder="Product Name"
+            name="product"
             type="text"
-            id="name"
-            value={postState.name}
+            id="product"
+            value={postState.product}
             onChange={handlePostChange}
           />
         </div>
@@ -100,7 +100,7 @@ function CreatePostForm() {
           <input
             placeholder="Price"
             name="price"
-            type="number"
+            type="text"
             id="price"
             value={postState.price}
             onChange={handlePostChange}

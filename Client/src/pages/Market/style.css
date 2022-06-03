@@ -1,9 +1,19 @@
 /* Market Items Section*/
+:root{
+    --primary:#e3e3e3;
+    --secondary: #353333;
+    --tertiary: #FFFFFF;
+    --dark: #949494;
+    --highlight: #9BD33E;
+    --red: rgb(205, 0, 0);
+}
+
 body{
-    margin: 0;
+    width: 100%;
+    background-color: var(--dark);
+    margin: auto;
     padding: 0;
     font-family: sans-serif;    
-    height:100%;
 }
 
 .container{
@@ -11,29 +21,22 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width: 90%;
-    align-items: center ;
+    margin:auto;
+    background-color: #353333;
+    justify-content: space-around;
 }
 
 
-.container > .card{
-    /* display: flex;
-    width: 300px;
-    height: 150px;
-    background: rgb(255, 255, 255);
-    border: 1px solid black;
-    align-items: center ;
-    margin: 10px auto; */
+.card{
         display: flex;
         flex-direction: column;
-        width: 300px;
-        height: 150px;
-        border: 1px solid black;
+        width: 30%;
         margin: 10px;
         align-items: center;
         text-align: justify;
-        padding: 10px;
+        padding: 20px;
         border-radius:  15px;
-        background: linear-gradient(to top, rgb(52, 255, 45) 50%, white 50%);
+        background: linear-gradient(to top, #9BD33E 50%, white 50%);
         background-size: 100% 200%;
         transition:  all .8s;
 }
@@ -43,16 +46,10 @@ body{
     border: none;
     box-shadow: 0 0 20px rgb(52, 255, 45);
 }
-
-.headings{
-    /* font-family: century; */
-    font-size: 3rem;
-    text-align: center;
-    margin: 40px 0px;
+img{
+    width: 20px;
 }
-
-#marketItems{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.heading{
+    width: 90%;
+    margin: auto;
 }
