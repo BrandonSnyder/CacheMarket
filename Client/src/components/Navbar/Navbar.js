@@ -12,10 +12,11 @@ function CacheNav() {
               CacheMarket
             </Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#market">Market</Nav.Link>
-              <Nav.Link href="#login">Login</Nav.Link>
-              <Nav.Link href="#sign up">Sign Up</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/login">Login</Nav.Link>
+              <Nav.Link href="/signup">Sign Up</Nav.Link>
+              <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+              <Nav.Link href="/create-post">New Post</Nav.Link>
             </Nav>
           </Container>
         </Navbar>

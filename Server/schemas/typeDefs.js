@@ -3,10 +3,10 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type Item {
     _id: ID
-    name: String!
-    description: String!
+    product: String!
+    description: String
     imgLink: String
-    price: String!
+    price: String
   }
 
   type User {
@@ -45,12 +45,11 @@ const typeDefs = gql`
     ): User
     
     addItem(
-      name: String!
+      product: String!
       description: String!
       imgLink: String
-      price: Float!
+      price: String
     ): Item
-
     login(
       email: String!
       password: String!
