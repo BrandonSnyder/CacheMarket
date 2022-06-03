@@ -1,0 +1,58 @@
+/* Market Items Section*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;    
+    height:100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center ;
+}
+
+
+.container > .card{
+    /* display: flex;
+    width: 300px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    align-items: center ;
+    margin: 10px auto; */
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 150px;
+        border: 1px solid black;
+        margin: 10px;
+        align-items: center;
+        text-align: justify;
+        padding: 10px;
+        border-radius:  15px;
+        background: linear-gradient(to top, rgb(52, 255, 45) 50%, white 50%);
+        background-size: 100% 200%;
+        transition:  all .8s;
+}
+.card:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(52, 255, 45);
+}
+
+.headings{
+    /* font-family: century; */
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+#marketItems{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
