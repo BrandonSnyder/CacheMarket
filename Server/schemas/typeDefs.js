@@ -4,9 +4,9 @@ const typeDefs = gql`
   type Item {
     _id: ID
     name: String!
-    description: String
+    description: String!
     imgLink: String
-    price: String
+    price: String!
   }
 
   type User {
@@ -47,9 +47,10 @@ const typeDefs = gql`
     addItem(
       name: String!
       description: String!
-      imgLink: String!
-      price:Float
+      imgLink: String
+      price: Float!
     ): Item
+
     login(
       email: String!
       password: String!

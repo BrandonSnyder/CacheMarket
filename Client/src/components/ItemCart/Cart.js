@@ -8,7 +8,7 @@ function Cart() {
       <div className="Cart-parent">
         <div>
           <button
-            class="btn btn-dark"
+            className="btn btn-dark"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
@@ -18,21 +18,21 @@ function Cart() {
           </button>
 
           <div
-            class="offcanvas offcanvas-end"
+            className="offcanvas offcanvas-end"
             tabindex="-1"
             id="offcanvasRight"
             aria-labelledby="offcanvasRightLabel"
           >
-            <div class="offcanvas-header">
+            <div className="offcanvas-header">
               <h5 id="offcanvasRightLabel">Cart</h5>
               <button
                 type="button"
-                class="btn-close text-reset"
+                className="btn-close text-reset"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="offcanvas-body">
+            <div className="offcanvas-body">
               <div className="Cart-items-container">
                 <div className="Cart-item-card">items go here</div>
                 <div className="Cart-item-card">items go here</div>
