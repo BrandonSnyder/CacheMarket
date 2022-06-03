@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const ADD_USER = gql`
-  mutation AddUser(
+  mutation addUser(
     $firstName: String!
     $lastName: String!
     $email: String!
@@ -23,6 +23,7 @@ export const ADD_USER = gql`
     }
   }
 `;
+
 export const ADD_ITEM = gql`
   mutation AddItem(
     $name: String!

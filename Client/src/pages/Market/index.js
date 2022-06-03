@@ -8,10 +8,9 @@ import "./style.css";
 function Market() {
   const { loading, data } = useQuery(QUERY_ITEMS);
   const items = data?.item || [];
-console.log("these are the items ", items)
   return (
     <section id="marketItems">
-      <h1 class="headings">MARKET</h1>
+      <h1 className="headings">MARKET</h1>
       <div className="container">
         {items.map((item)=> (
           <div className="card">

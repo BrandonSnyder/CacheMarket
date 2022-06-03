@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+
 import "./Signup.css";
-import { useMutation } from '@apollo/client';
-// import Auth from '../utils/auth';
-import { ADD_USER } from '../../utils/mutations';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
 
 function Signup() {
   const [formState, setFormState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    city: '',
-    state: '',
-    phone: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    city: "",
+    state: "",
+    phone: "",
   });
+
   const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -33,68 +33,72 @@ function Signup() {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'firstName' && value.length <= 280) {
+    if (name === "firstName" && value.length <= 280) {
       setFormState({ ...formState, [name]: value });
-    } else if (name !== 'firstName') {
-      setFormState({ ...formState, [name]: value });
-    }
-    if (name === 'lastName' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'lastName') {
+    } else if (name !== "firstName") {
       setFormState({ ...formState, [name]: value });
     }
-    if (name === 'email' && value.length <= 280) {
+    if (name === "lastName" && value.length <= 280) {
       setFormState({ ...formState, [name]: value });
-    } else if (name !== 'email') {
-      setFormState({ ...formState, [name]: value });
-    }
-    if (name === 'password' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'password') {
+    } else if (name !== "lastName") {
       setFormState({ ...formState, [name]: value });
     }
-    if (name === 'city' && value.length <= 280) {
+    if (name === "email" && value.length <= 280) {
       setFormState({ ...formState, [name]: value });
-    } else if (name !== 'city') {
+    } else if (name !== "email") {
       setFormState({ ...formState, [name]: value });
     }
-
+    if (name === "password" && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== "password") {
+      setFormState({ ...formState, [name]: value });
+    }
+    if (name === "city" && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
+    } else if (name !== "city") {
+      setFormState({ ...formState, [name]: value });
+    }
   };
 
   return (
     <div className="signupContainer">
       {/* <Link to="/login">← Go to Login</Link> */}
-
       <h2>Signup</h2>
-      <form className='signupForm' onSubmit={handleFormSubmit}>
+      <form className="signupForm" onSubmit={handleFormSubmit}>
         <div className="input">
-          <label htmlFor="firstName"><span>*</span>First Name:</label>
+          <label htmlFor="firstName">
+            <span>*</span>First Name:
+          </label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="First Name"
             name="firstName"
-            type="firstName"
+            type="text"
             id="firstName"
             value={formState.firstName}
             onChange={handleChange}
           />
         </div>
         <div className="input">
-          <label htmlFor="lastName"><span>*</span>Last Name:</label>
+          <label htmlFor="lastName">
+            <span>*</span>Last Name:
+          </label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="Last Name"
             name="lastName"
-            type="lastName"
+            type="text"
             id="lastName"
             value={formState.lastName}
             onChange={handleChange}
           />
         </div>
         <div className="input">
-          <label htmlFor="email"><span>*</span>Email:</label>
+          <label htmlFor="email">
+            <span>*</span>Email:
+          </label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -104,9 +108,11 @@ function Signup() {
           />
         </div>
         <div className="input">
-          <label htmlFor="password"><span>*</span>Password:</label>
+          <label htmlFor="password">
+            <span>*</span>Password:
+          </label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="Password"
             name="password"
             type="password"
@@ -118,7 +124,7 @@ function Signup() {
         <div className="input">
           <label htmlFor="city">City:</label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="City"
             name="city"
             type="text"
@@ -128,9 +134,11 @@ function Signup() {
           />
         </div>
         <div className="input">
-          <label htmlFor="state"><span>*</span>State:</label>
+          <label htmlFor="state">
+            <span>*</span>State:
+          </label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="State"
             name="state"
             type="text"
@@ -142,7 +150,7 @@ function Signup() {
         <div className="input">
           <label htmlFor="phone">Phone Number:</label>
           <input
-          className="inputBox"
+            className="inputBox"
             placeholder="1231231234"
             name="phone"
             type="text"
@@ -152,7 +160,9 @@ function Signup() {
           />
         </div>
         <span>* required</span>
-        <button className='submitbtn' type="submit">Submit</button>
+        <button className="submitbtn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

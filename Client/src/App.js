@@ -7,6 +7,7 @@ import LikedItems from './components/likedItems/LikedItems';
 import CacheNav from "./components/Navbar/Navbar.js";
 import Cart from './components/ItemCart/Cart';
 import Signup from './components/signup/Signup.js';
+import ContactUs from './components/contactUs/ContactUs'
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -19,8 +20,9 @@ function App() {
       <CacheNav />
       <Cart />
       <Market/>
-      <Signup/>
       <CreatePostForm/>
+      <Signup/>
+      <ContactUs/>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>

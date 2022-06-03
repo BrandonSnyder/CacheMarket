@@ -30,7 +30,7 @@ const resolvers = {
     },
     addItem: async (parent, args) => {
       const item = await Item.create(args);
-      return item
+      return {token, item}
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });

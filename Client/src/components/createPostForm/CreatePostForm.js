@@ -1,25 +1,24 @@
-import React,{ useState }  from "react";
+import React, { useState } from "react";
 
 import "./CreatePostForm.css";
-import { useMutation } from '@apollo/client';
-import { ADD_ITEM } from '../../utils/mutations';
+import { useMutation } from "@apollo/client";
+import { ADD_ITEM } from "../../utils/mutations";
 
-
-const CreatePostForm = () => {
-  const [formState, setFormState] = useState({
-    name:"",
-    description:"",
-    imgLink:"",
-    price:""
+function CreatePostForm() {
+  const [postState, setPostState] = useState({
+    name: "",
+    description: "",
+    imgLink: "",
+    price: "",
   });
 
   const [addItem, { error }] = useMutation(ADD_ITEM);
 
-  const handleFormSubmit = async (event) => {
+  const handlePostSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = addItem({
-        variables: { ...formState },
+        variables: { ...postState },
       });
 
       window.location.reload();
@@ -28,41 +27,35 @@ const CreatePostForm = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handlePostChange = (event) => {
     const { name, value } = event.target;
-
-    if (name === 'name' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'name') {
-      setFormState({ ...formState, [name]: value });
+    console.log(name, value);
+    if (name === "name" && value.length <= 280) {
+      setPostState({ ...postState, [name]: value });
+    } else if (name !== "name") {
+      setPostState({ ...postState, [name]: value });
     }
-    if (name === 'description' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'description') {
-      setFormState({ ...formState, [name]: value });
+    if (name === "description" && value.length <= 280) {
+      setPostState({ ...postState, [name]: value });
+    } else if (name !== "description") {
+      setPostState({ ...postState, [name]: value });
     }
-    if (name === 'imgLink' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'imgLink') {
-      setFormState({ ...formState, [name]: value });
+    if (name === "imgLink" && value.length <= 280) {
+      setPostState({ ...postState, [name]: value });
+    } else if (name !== "imgLink") {
+      setPostState({ ...postState, [name]: value });
     }
-    if (name === 'price' && value.length <= 280) {
-      setFormState({ ...formState, [name]: value });
-    } else if (name !== 'price') {
-      setFormState({ ...formState, [name]: value });
+    if (name === "price" && value.length <= 280) {
+      setPostState({ ...postState, [name]: value });
+    } else if (name !== "price") {
+      setPostState({ ...postState, [name]: value });
     }
   };
-
-
-
-
-
 
   return (
     <section className="createPostContainer">
       <h1>Create Post</h1>
-      <form className="signupForm" onSubmit={handleFormSubmit}>
-        
+      <form className="signupForm" onSubmit={handlePostSubmit}>
         <div className="input">
           <label htmlFor="Name">
             <span>*</span>Name:
@@ -72,7 +65,8 @@ const CreatePostForm = () => {
             name="name"
             type="text"
             id="name"
-            onChange={handleChange}
+            value={postState.name}
+            onChange={handlePostChange}
           />
         </div>
         <div className="input">
@@ -84,7 +78,8 @@ const CreatePostForm = () => {
             name="description"
             type="text"
             id="description"
-            onChange={handleChange}
+            value={postState.description}
+            onChange={handlePostChange}
           />
         </div>
         <div className="input">
@@ -94,7 +89,8 @@ const CreatePostForm = () => {
             name="imgLink"
             type="url"
             id="imgLink"
-            onChange={handleChange}
+            value={postState.imgLink}
+            onChange={handlePostChange}
           />
         </div>
         <div className="input">
@@ -106,14 +102,17 @@ const CreatePostForm = () => {
             name="price"
             type="number"
             id="price"
-            onChange={handleChange}
+            value={postState.price}
+            onChange={handlePostChange}
           />
         </div>
         <span>* required</span>
-        <button className='submitbtn' type="submit">Submit</button>
+        <button className="submitbtn" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );
-};
+}
 
 export default CreatePostForm;
