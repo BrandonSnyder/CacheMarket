@@ -7,6 +7,7 @@ import "./style.css";
 function Market() {
   const { loading, data } = useQuery(QUERY_ITEMS);
   const items = data?.item || [];
+
   return (
     <section id="marketItems">
       <h1 className="headings">MARKET</h1>
