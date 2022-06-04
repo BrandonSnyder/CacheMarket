@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./CreatePostForm.css";
 import { useMutation } from "@apollo/client";
 import { ADD_ITEM } from "../../utils/mutations";
+import { BsHeart, BsHeartFill, BsCartPlus, BsCartDash } from "react-icons/bs"
 
 function CreatePostForm() {
   const [postState, setPostState] = useState({
@@ -122,7 +123,7 @@ function CreatePostForm() {
             <h5>{postState.description}</h5>
             <h5>${postState.price}</h5>
             <div className="btnContainer">
-            <button type="">Like</button>
+            <button type=""><BsHeart/></button>
             <button type="">Add to Cart</button>
             </div>
           </div>

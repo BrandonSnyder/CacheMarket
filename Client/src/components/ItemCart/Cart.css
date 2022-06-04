@@ -38,8 +38,13 @@ font-size: larger;
     display: flex;
     justify-content: space-around;
     padding: 8px;
-    margin: 25px 0;
+    
 }
+.btnContainer button{
+    display: flex;
+    margin: auto;
+}
+
 .btnContainer button:hover{
     color:#9BD33E;
     background-color: var(--secondary);

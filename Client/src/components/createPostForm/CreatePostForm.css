@@ -46,7 +46,7 @@
     margin: 10px;
 }
 .input input{
- width: 450px;
+ width: 60%;
 }
 span{
     color: red;
@@ -96,9 +96,18 @@ span{
     max-width: 200px;
     max-height: 200px;
 }
+.btnContainer{
+    margin: 10px auto 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .btnContainer button{
-    margin: 20px;  
+    font-size: 20px;
+    margin: 0 20px 30px ; 
+    border-radius: 20px;
+    background-color: var(--dark);
 }
 .createPostSubmitbtn{
     width: 100px;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS } from "../../utils/queries";
 import "./style.css";
+import {BsHeart} from "react-icons/bs"
 
 function Market() {
   const { loading, data } = useQuery(QUERY_ITEMS);
@@ -18,7 +19,7 @@ function Market() {
             <p>{item.description}</p>
             <p>{item.price}</p>
             <div className="buttonContainer">
-            <button type="">Like</button>
+            <button type=""><BsHeart/></button>
             <button type="">Add to Cart</button>
             </div>
           </div>

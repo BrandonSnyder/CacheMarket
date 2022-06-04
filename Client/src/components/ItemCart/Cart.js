@@ -1,6 +1,7 @@
 import React from "react";
 import { Offcanvas } from "react-bootstrap";
 import "./Cart.css";
+import {BsHeart} from "react-icons/bs"
 
 function Cart() {
   return (
@@ -39,7 +40,6 @@ function Cart() {
                   <img src="https://images.unsplash.com/photo-1638913658179-18c9a9c943f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
                   <h5>$4.00</h5>
                   <div className="btnContainer">
-                    <button type="">Like</button>
                     <button type="">Remove</button>
                   </div>
                 </div>
