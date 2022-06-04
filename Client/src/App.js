@@ -12,6 +12,7 @@ import Login from "./components/login/Login";
 import Footer from "./components/footer/Footer";
 
 
+
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
