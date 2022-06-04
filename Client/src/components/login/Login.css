@@ -5,18 +5,23 @@
     --dark: #949494;
     --highlight: #9BD33E;
     --red: rgb(205, 0, 0);
-    }
+}
 
-.signupContainer{
+.loginContainer{
     background-color: var(--secondary);
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 80px auto;
-    padding: 40px;
+    margin: 200px auto;
+    padding: 80px;
     align-items: center;
 }
-.signupForm{
+.loginContainer h1{
+    color: var(--highlight);
+    font-size: 50px;
+    margin: 0 0 30px;
+}
+.loginForm{
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -24,20 +29,14 @@
     padding: 20px;
     box-shadow: 10px 10px;
 }
-.signupContainer h1{
-    font-size: 50px;
-    margin: 0 0 50px;
-    color: var(--highlight);
-}
-
-.input{
+.loginInput{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 10px;
 }
-.inputBox{
-    width: 400px;
+.loginInput input{
+ width: 400px;
 }
 span{
     color: red;
@@ -45,6 +44,8 @@ span{
 }
 .submitbtn{
     width: 100px;
-    margin: 10px auto 0 ;
+    margin: auto;
 }
 
+
+/* End of CreatePostForm */

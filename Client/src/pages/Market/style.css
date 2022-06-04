@@ -11,11 +11,27 @@
 body{
     width: 100%;
     background-color: var(--dark);
-    margin: auto;
     padding: 0;
     font-family: sans-serif;    
 }
+#marketItems{
+    display: flex;
+    flex-direction: column;
+    background-color: #353333;
+    width: 90%;
+    margin:  auto ;
+    padding: 0 0 30px;
 
+}
+.heading{
+    color: var(--highlight);
+    margin: 30px auto;   
+}
+.heading:hover{
+    transform: rotate(-360deg) scale(3.0);
+    color: #949494;
+    transition: 2s;
+}
 .container{
     display: flex;
     flex-direction: row;
@@ -26,10 +42,13 @@ body{
     justify-content: space-around;
 }
 
-
 .card{
         display: flex;
         flex-direction: column;
+        min-width: 280px;
+        max-width: 350px;
+        min-height: 350px;
+        max-height: 400px;
         width: 30%;
         margin: 10px;
         align-items: center;
@@ -44,12 +63,21 @@ body{
     background-position: left bottom;
     color: white;
     border: none;
-    box-shadow: 0 0 20px rgb(52, 255, 45);
 }
-img{
-    width: 20px;
-}
-.heading{
-    width: 90%;
+.card p{
+    max-width: 60%;
     margin: auto;
+}
+.card img{
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px 0;
+}
+.buttonContainer button{
+    margin: 20px; 
+}
+
+.buttonContainer button:hover{
+    color:#9BD33E;
+    background-color: var(--secondary);
 }

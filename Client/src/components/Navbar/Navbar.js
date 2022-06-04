@@ -1,25 +1,30 @@
 import React from "react";
-import { Nav, Navbar, Container } from "react-bootstrap";
+
+import "./Navbar.css";
+import logo from "./fingerlogo2.png";
 
 
 function CacheNav() {
   return (
     <div>
       <>
-        <Navbar bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand className="site-title" href="">
+        <nav className="navbar" variant="dark">
+          <section className="navbarContainer">
+          <div className="logoName">
+          <img src={logo} alt="logo" />
+            <h1 className="navbarTitle" href="">
               CacheMarket
-            </Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/login">Login</Nav.Link>
-              <Nav.Link href="/signup">Sign Up</Nav.Link>
-              <Nav.Link href="/contact-us">Contact Us</Nav.Link>
-              <Nav.Link href="/create-post">New Post</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
+            </h1>
+          </div>
+            <nav className=" navBarLinkContainer">
+              <a className="navbarLink" href="/">Home</a>
+              <a className="navbarLink" href="/login">Login</a>
+              <a className="navbarLink" href="/signup">Sign Up</a>
+              <a className="navbarLink" href="/contact-us">Contact Us</a>
+              <a className="navbarLink" href="/create-post">New Post</a>
+            </nav>
+          </section>
+        </nav>
       </>
     </div>
   );

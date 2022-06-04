@@ -9,11 +9,16 @@
     .contactUsContainer{
         display: flex;
         flex-direction: column;
-        width: 90%;
-        margin: 30px auto;
-        background-color: var(--primary);
+        width: 70%;
+        margin: auto;
+        background-color: var(--secondary);
         align-items: center;
         padding: 30px;
+    }
+    .contactUsContainer h1{
+        font-size: 50px;
+        color: var(--highlight);
+        text-shadow: 3px 3px var(--secondary);
     }
     .contactCardsContainer{
         width: 90%;
@@ -27,18 +32,19 @@
         flex-direction: column;
         flex-wrap: wrap;
         background-color: var(--dark);
-        width: 35%;
+        width: 40%;
         margin: 30px auto;
         padding: 30px;
         align-items: center;
         transition-duration: 2s;
         border-radius: 20px;
-
+filter: grayscale(100%);
     }
     .contactCard img{
         width: 50%;
         margin: 20px;
         border-radius: 20px;
+        
     }
     .contactUsDescription{
         width: 80%;
@@ -51,17 +57,21 @@
     }
 /* carrington Card */
 .Carrington:hover{
-    background-color: #e8928d; 
+    background-color: #BF8E8A;
+    filter: none;
 }
  /* Brandon Card */   
 .Brandon:hover{
-    background-color: #2f7dc2; 
+    background-color: #79BAF2;
+    filter: none;
 }
 /* fisher Card */
 .Fisher:hover{
-    background-color: #55aa5a; 
+    background-color: #5D7CA6; 
+    filter: none;
 }
 /* lamont Card */
 .Lamont:hover{
-    background-color:#55aa5a;
+    background-color:#FABC65;
+    filter: none;
 }

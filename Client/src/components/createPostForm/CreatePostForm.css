@@ -7,22 +7,37 @@
     --red: rgb(205, 0, 0);
 }
 
+
 .createPostContainer{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 90%;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 150px auto; 
+    padding: 30px 0;
     align-items: center;
 }
-.signupForm{
+.leftContainer{
+    background-color: var(--secondary);
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 50%;
+    margin: auto;
+    align-items: center;
+}
+
+.createPostForm{
+    display: flex;
+    flex-direction: column;
     background-color: var(--dark);
-    padding: 20px;
-    box-shadow: 10px 10px;
+    width: 80%;
+    margin: 20px 0 0 0;
+    padding: 15px;
+} 
+.createPostContainer h1{
+    font-size: 50px;
+    margin: 0 0 40px;
+    color: var(--highlight);
 }
 .input{
     display: flex;
@@ -31,16 +46,67 @@
     margin: 10px;
 }
 .input input{
- width: 400px;
+ width: 450px;
 }
 span{
     color: red;
     margin: auto;
 }
-.submitbtn{
-    width: 100px;
+.rightContainer{
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     margin: auto;
+    align-items: center;
 }
 
+.createCardContainer{
+    width: 90%;
+    margin: auto;
 
+}
+.createCard{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary);
+    min-width: 280px;
+    max-width: 350px;
+    min-height: 350px;
+    max-height: 400px;
+    margin: auto;
+    align-items: center;
+    text-align: justify;
+    border-radius: 15px;
+    background: linear-gradient(to top, #9BD33E 50%, white 50%);
+    background-size: 100% 200%;
+    transition:  all .8s;
+}
+.createCard:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+}
+.createCard h1{
+    color: var(--secondary);
+    margin: 10px;
+}
+.createCard img{
+    margin: 20px auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.btnContainer button{
+    margin: 20px;  
+}
+.createPostSubmitbtn{
+    width: 100px;
+    margin: 10px auto 20px;
+
+}
+.createPostSubmitbtn:hover{
+    color:#9BD33E;
+    background-color: var(--secondary);
+}
 /* End of CreatePostForm */
