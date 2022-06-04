@@ -25,6 +25,7 @@
 .footerContactUs{
     margin: auto;
     text-decoration: none;
+    background-color: none;
     color: var(--highlight);
 }
 .footerContactUs:hover{

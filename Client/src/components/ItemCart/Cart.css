@@ -23,6 +23,11 @@
     justify-content: end;
 }
 
+.btn {
+margin: 4px;
+font-size: larger;
+}
+
 .Cart-item-card{
     border: 1px solid black;
     border-radius: 5px;
@@ -77,5 +82,7 @@
     max-width: 200px;
     max-height: 200px;
 }
+
+
 
 
