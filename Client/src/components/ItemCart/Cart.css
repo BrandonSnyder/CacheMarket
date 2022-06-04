@@ -1,3 +1,23 @@
+:root{
+    --primary:#e3e3e3;
+    --secondary: #353333;
+    --tertiary: #FFFFFF;
+    --dark: #949494;
+    --highlight: #9BD33E;
+    --red: rgb(205, 0, 0);
+}
+
+
+.offcanvas{
+    background-color: var(--secondary);
+}
+#offcanvasRightLabel{
+    color: var(--highlight);
+}
+
+.Cart-Container{
+    background-color: var(--dark);
+}
 .Cart-parent{
     display: flex;
     justify-content: end;
@@ -13,8 +33,49 @@
     display: flex;
     justify-content: space-around;
     padding: 8px;
+    margin: 25px 0;
+}
+.btnContainer button:hover{
+    color:#9BD33E;
+    background-color: var(--secondary);
 }
 
-.Checkout-button{
-    
+.cartCardContainer{
+    width: 90%;
+    margin: auto;
+
 }
+
+.cartCard{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary);
+    min-width: 280px;
+    max-width: 350px;
+    min-height: 350px;
+    max-height: 400px;
+    margin: auto;
+    align-items: center;
+    text-align: justify;
+    border-radius: 15px;
+    background: linear-gradient(to top, #9BD33E 50%, white 50%);
+    background-size: 100% 200%;
+    transition:  all .8s;
+}
+.cartCard:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+}
+
+.cartCard h1{
+    color: var(--secondary);
+    margin: 10px;
+}
+.cartCard img{
+    margin: 20px auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+

@@ -63,7 +63,7 @@ function Signup() {
   return (
     <div className="signupContainer">
       {/* <Link to="/login">← Go to Login</Link> */}
-      <h2>Signup</h2>
+      <h1>Signup</h1>
       <form className="signupForm" onSubmit={handleFormSubmit}>
         <div className="input">
           <label htmlFor="firstName">

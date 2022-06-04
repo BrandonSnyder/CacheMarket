@@ -1,0 +1,57 @@
+:root{
+    --primary:#e3e3e3;
+    --secondary: #353333;
+    --tertiary: #FFFFFF;
+    --dark: #949494;
+    --highlight: #9BD33E;
+    --red: rgb(205, 0, 0);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background: var(--secondary);
+    width:100%;
+    padding: 10px;
+}
+.navbarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+}
+.logoName{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.logoName img{
+    width: 50px;
+    height: 50px;
+}
+.navbarTitle{
+    display: flex;
+    background-color: #353333;
+    color: var(--highlight);
+    font-size: 50px;
+    padding: 5px;
+    
+}
+.navBarLinkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width:70%;
+}
+.navbarLink{
+    text-decoration: none;
+    margin: 1%;
+    padding: 5px;
+    font-size: 25px;
+    color: var(--primary);
+}
+.navbarLink:hover{
+    color: var(--highlight);
+    transition: .5s;
+    border: 1px solid var(--highlight);
+}

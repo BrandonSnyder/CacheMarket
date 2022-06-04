@@ -33,13 +33,18 @@ function Cart() {
               ></button>
             </div>
             <div className="offcanvas-body">
-              <div className="Cart-items-container">
-                <div className="Cart-item-card">items go here</div>
-                <div className="Cart-item-card">items go here</div>
-                <div className="Cart-item-card">items go here</div>
+              <div className="Cart-items-container cartCardContainer">
+                <div className="cartCard">
+                  <h1>Product Name</h1>
+                  <img src="https://images.unsplash.com/photo-1638913658179-18c9a9c943f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
+                  <h5>$4.00</h5>
+                  <div className="btnContainer">
+                    <button type="">Like</button>
+                    <button type="">Remove</button>
+                  </div>
+                </div>
               </div>
               <div className="Button-holder">
-                <div className="Checkout-button"></div>
                 <button> Checkout </button>
               </div>
             </div>
