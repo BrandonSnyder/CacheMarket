@@ -52,7 +52,6 @@ body{
         width: 30%;
         margin: 10px;
         align-items: center;
-        text-align: justify;
         padding: 20px;
         border-radius:  15px;
         background: linear-gradient(to top, #9BD33E 50%, white 50%);
@@ -74,7 +73,11 @@ body{
     margin: 10px 0;
 }
 .buttonContainer button{
-    margin: 20px; 
+    font-size: 20px;
+    margin: 0 20px 30px ; 
+    border-radius: 20px;
+    background-color: var(--dark);
+
 }
 
 .buttonContainer button:hover{

@@ -29,11 +29,11 @@
 }
 .footerContactUs:hover{
     color:var(--highlight);
-    background-color: var(--secondary) ;
+    background-color: none;
     transform: rotate(360deg) scale(3.0);
     transition: 1s;
     padding: 10px;
-    border: 1px solid var(--highlight);
+    
 }
 .footerLogoName{
     display: flex;
