@@ -1,31 +1,57 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation, useState} from "@apollo/client";
 import { QUERY_ITEMS } from "../../utils/queries";
+import { REMOVE_ITEM } from "../../utils/mutations";
 import "./style.css";
-import {BsHeart} from "react-icons/bs"
+import {BsHeart, BsTrash} from "react-icons/bs";
+import Auth from '../../utils/auth';
+import LikedItems from "../../components/likedItems/LikedItems";
+
 
 function Market() {
   const { loading, data } = useQuery(QUERY_ITEMS);
+  const [removeItem, { error }] = useMutation(REMOVE_ITEM);
   const items = data?.item || [];
 
+  const handleDeleteItem = async (itemId) => {
+    try {
+      const { data } = await removeItem({
+        variables:  {itemId} ,
+      });
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
-    <section id="marketItems">
+
+    <div>
+      <section id="marketItems">
       <h1 className="heading">MARKET</h1>
       <div className="container">
         {items.map((item) => (
           <div className="card">
+            <h1>{item.product}</h1>
             <img src={item.imgLink} alt="img" />
             <p>{item.description}</p>
-            <p>{item.price}</p>
+            <p>${item.price}</p>
             <div className="buttonContainer">
             <button type=""><BsHeart/></button>
+            <button type="" onClick={() => handleDeleteItem(item._id)}><BsTrash/></button>
             <button type="">Add to Cart</button>
             </div>
           </div>
         ))}
       </div>
+      
     </section>
+    {Auth.loggedIn()?(
+            <div>
+              <LikedItems />
+            </div> ): (<div></div>)
+            }
+    </div>
   );
 }
 

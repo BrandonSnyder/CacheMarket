@@ -49,3 +49,29 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const REMOVE_ITEM = gql`
+mutation RemoveItem($itemId: ID!) {
+  removeItem(itemId: $itemId) {
+    _id
+  }
+}
+`;
+export const SAVE_BOOK = gql`
+  mutation saveBook($bookData: BookInput!) {
+    saveBook(bookData: $bookData) {
+      _id
+      username
+      email
+      savedBooks {
+        bookId
+        authors
+        image
+        description
+        title
+        link
+      }
+    }
+  }
+`;
+

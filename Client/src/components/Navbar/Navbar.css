@@ -13,8 +13,9 @@
     display: flex;
     flex-direction: row;
     background: var(--secondary);
-    width:100%;
-    padding: 10px;
+    width: 100%;
+    padding: 10px ;
+    
 }
 .navbarContainer{
     display: flex;
@@ -39,6 +40,20 @@
     font-size: 50px;
     padding: 5px;
     
+}
+.navCart{
+    background-color: var(--secondary);
+    border: none;
+    text-decoration: none;
+    margin: 9px;
+    padding: 5px 0 15px;
+    font-size: 25px;
+    color: var(--primary);
+}
+.navCart:hover{
+    color: var(--highlight);
+    transition: .5s;
+    border: 1px solid var(--highlight);
 }
 .navBarLinkContainer{
     display: flex;

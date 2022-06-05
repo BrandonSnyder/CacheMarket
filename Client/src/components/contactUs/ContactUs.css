@@ -12,8 +12,8 @@
     .contactUsContainer{
         display: flex;
         flex-direction: column;
-        width: 70%;
-        margin: auto;
+        width: 90%;
+        margin:  20px auto;
         background-color: var(--secondary);
         align-items: center;
         padding: 30px;
@@ -58,6 +58,23 @@ filter: grayscale(100%);
         width: 50%;
           
     }
+    .LinkDiv{
+        width: 45%;
+        justify-content: space-around;
+        font-size: 30px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+    }
+    .LinkDiv a:hover{
+        transform: scale(1.5);
+        transition: 2s;
+    }
+
+#github{
+    color: var(--secondary);
+}
+
 /* carrington Card */
 .Carrington:hover{
     background-color: #BF8E8A;

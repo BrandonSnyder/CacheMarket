@@ -2,6 +2,7 @@ import React from "react";
 import { Offcanvas } from "react-bootstrap";
 import "./Cart.css";
 import {BsHeart} from "react-icons/bs"
+import ThankYou from "../ThankYou/ThankYou";
 
 function Cart() {
   return (
@@ -44,8 +45,8 @@ function Cart() {
                   </div>
                 </div>
               </div>
-              <div className="Button-holder">
-                <button> Checkout </button>
+              <div className="Button-holder checkoutbtn">
+                <a id="checkoutbtn" href="/ThankYou" > Checkout </a>
               </div>
             </div>
           </div>

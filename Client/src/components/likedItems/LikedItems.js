@@ -1,30 +1,26 @@
 import React from "react";
 import "./LikedItems.css";
+import { BsHeart, BsTrash, BsHeartFill, BsCartPlus, BsCartDash } from "react-icons/bs"
 // import { useQuery } from "@apollo/client";
 // import { QUERY_ITEMS } from "../utils/queries";
 
 const LikedItems = () => {
   return (
     <section className="likedItemsContainer">
-        <h1>Liked Items</h1>
-        <div className="cardsContainer">
-            <div className="likedCard">
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FCarhartt-Mens-Relaxed-Rugged-Khaki%2Fdp%2FB0085TF7DS&psig=AOvVaw2Vtbh33I3GOx1Kch3GyWHT&ust=1654107183321000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLDv0cqrivgCFQAAAAAdAAAAABAF" alt="pants" width="100px" height=""></img>
-                <h3>name</h3>
+        <h1 className="likedItemTitle">Liked Items</h1>
+        <div className="likedItemcardsContainer">
+        <div className="likedItemCard">
+            <h1>Title</h1>
+            <img src="https://images.unsplash.com/photo-1638913658179-18c9a9c943f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="img" />
+            
+            <p>$20.00</p>
+            <div className="buttonContainer">
+            <button type=""><BsHeartFill/></button>
+            <button type=""><BsTrash/></button>
+            <button type="">Add to Cart</button>
             </div>
-            <div className="likedCard">
-                <h1>Image</h1>
-                <h3>name</h3>
-            </div>
-            <div className="likedCard">
-                <h1>Image</h1>
-                <h3>name</h3>
-            </div> 
-            <div className="likedCard">
-                <h1>Image</h1>
-                <h3>name</h3>
-            </div>   
-        </div>
+          </div>
+        </div>   
     </section>
   );
 };
