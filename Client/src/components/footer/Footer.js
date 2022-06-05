@@ -6,7 +6,10 @@ function Footer() {
       <div>
           <nav className="footer" variant="dark">
             <section className="footerContainer">
-                <a href="/contact-us" className="footerContactUs">Contact Us</a>
+            <div className="footerContactUs">
+            <a href="/contact-us" >Contact Us</a>
+            </div>
+                
             <div className="footerLogoName">
             <img src={logo} alt="logo" />
               <h1 className="navbarTitle" href="">

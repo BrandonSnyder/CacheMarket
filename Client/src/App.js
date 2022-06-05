@@ -13,7 +13,7 @@ import ContactUs from "./components/contactUs/ContactUs";
 import Login from "./components/login/Login";
 import Footer from "./components/footer/Footer";
 import { setContext } from '@apollo/client/link/context';
-
+import Auth from './utils/auth';
 
 
 const httpLink = new createHttpLink({
@@ -47,14 +47,15 @@ function App() {
       
         <div className="flex-column justify-center align-center min-100-vh ">
         <CacheNav />
-        <Cart />
           <Routes>            
             <Route path="/" element={<Market />} />
             <Route path="/login" element={<Login />} />
             <Route path="/create-post" element={<CreatePostForm />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            
           </Routes>
+          
         </div>
       
       </Router>

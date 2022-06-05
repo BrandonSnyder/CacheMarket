@@ -12,9 +12,10 @@
 }
 
 body{
-    width: 100%;
+    max-width: 1400px;
     background-color: var(--dark);
     padding: 0;
+    margin: auto;
     font-family: sans-serif;    
 }
 #marketItems{
@@ -22,7 +23,7 @@ body{
     flex-direction: column;
     background-color: #353333;
     width: 90%;
-    margin:  auto ;
+    margin:  40px auto ;
     padding: 0 0 30px;
 
 }
@@ -75,11 +76,15 @@ body{
     max-height: 200px;
     margin: 10px 0;
 }
+
+
 .buttonContainer button{
     font-size: 20px;
-    margin: 0 20px 30px ; 
+    margin: 0 10px 30px ; 
     border-radius: 20px;
+    
     background-color: var(--dark);
+    justify-content: center;
 
 }
 

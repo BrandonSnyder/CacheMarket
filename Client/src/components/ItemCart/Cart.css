@@ -17,7 +17,6 @@
 #offcanvasRightLabel{
     color: var(--highlight);
 }
-
 .Cart-Container{
     background-color: var(--dark);
 }
@@ -25,18 +24,15 @@
     display: flex;
     justify-content: end;
 }
-
 .btn {
 margin: 4px;
 font-size: larger;
 }
-
 .Cart-item-card{
     border: 1px solid black;
     border-radius: 5px;
     padding: 100px
 }
-
 .Button-holder{
     display: flex;
     justify-content: space-around;
@@ -47,18 +43,14 @@ font-size: larger;
     display: flex;
     margin: auto;
 }
-
 .btnContainer button:hover{
     color:#9BD33E;
     background-color: var(--secondary);
 }
-
 .cartCardContainer{
     width: 90%;
     margin: auto;
-
 }
-
 .cartCard{
     display: flex;
     flex-direction: column;
@@ -90,6 +82,7 @@ font-size: larger;
     max-width: 200px;
     max-height: 200px;
 }
+
 
 
 

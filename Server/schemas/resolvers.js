@@ -48,7 +48,11 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    }
+    },
+
+    removeItem: async (parent, { itemId }) => {
+      return Item.findOneAndDelete({ _id: itemId});
+    },
   }
 };
 

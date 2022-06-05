@@ -20,7 +20,7 @@ function LoginForm() {
           email: formState.email,
         password: formState.password,
          },
-      });      
+      });     
       const token = variable;
       Auth.login(token);
       window.location.reload();
@@ -66,7 +66,7 @@ function LoginForm() {
           <input
             placeholder="Password"
             name="password"
-            type="text"
+            type="password"
             id="password"
             onChange={handleChange}
           />

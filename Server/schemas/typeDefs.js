@@ -18,7 +18,7 @@ const typeDefs = gql`
     state: String!
     phone: String
     likedItem: [Item]
-    cart:[Item]
+    cart: [Item]
   }
 
   type Auth {
@@ -26,9 +26,8 @@ const typeDefs = gql`
     user: User
   }
 
-
   type Query {
-    me:User
+    me: User
     item: [Item]
     user: [User]
   }
@@ -43,18 +42,16 @@ const typeDefs = gql`
       state: String!
       phone: String
     ): User
-    
+
     addItem(
       product: String!
       description: String!
       imgLink: String
       price: String
     ): Item
-    login(
-      email: String!
-      password: String!
-    ):Auth
-    
+
+    login(email: String!, password: String!): Auth
+    removeItem(itemId: ID!): Item
   }
 `;
 module.exports = typeDefs;

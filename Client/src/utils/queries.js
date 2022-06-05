@@ -3,6 +3,7 @@ import { gql } from '@apollo/client';
 export const QUERY_ITEMS = gql`
 query Item {
     item {
+      _id
       product
       description
       imgLink
