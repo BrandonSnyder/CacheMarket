@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import Auth from '../../utils/auth';
 import "./Signup.css";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 
-function Signup() {
+function Signup(props) {
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -14,25 +14,27 @@ function Signup() {
     state: "",
     phone: "",
   });
-
   const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const { data } = addUser({
-        variables: { ...formState },
+      const  variable  = addUser({
+        variables: { 
+          email: formState.email,
+        password: formState.password,
+         },
       });
-
+      console.log(variable)
+      
+      const token = variable;//doesnt make it past here
+      console.log('I made it')
+      Auth.login(token);
       window.location.reload();
-    } catch (err) {
-      console.error(err);
-    }
+    
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name, value);
     if (name === "firstName" && value.length <= 280) {
       setFormState({ ...formState, [name]: value });
     } else if (name !== "firstName") {

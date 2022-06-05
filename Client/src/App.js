@@ -1,6 +1,8 @@
-import React , {Fragment} from "react";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache,createHttpLink } from "@apollo/client";
+import { Provider } from 'react-redux';
+import store from './utils/store';
 import Market from "./pages/Market";
 import CreatePostForm from "./components/createPostForm/CreatePostForm";
 import LikedItems from "./components/likedItems/LikedItems";
@@ -10,21 +12,42 @@ import Signup from "./components/signup/Signup.js";
 import ContactUs from "./components/contactUs/ContactUs";
 import Login from "./components/login/Login";
 import Footer from "./components/footer/Footer";
+import { setContext } from '@apollo/client/link/context';
 
 
+
+const httpLink = new createHttpLink({
+  uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 const client = new ApolloClient({
-  uri: "/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <CacheNav />
-      <Cart />
+      
+      
+
+
       <Router>
+      
+      
         <div className="flex-column justify-center align-center min-100-vh ">
+        <CacheNav />
+        <Cart />
           <Routes>            
             <Route path="/" element={<Market />} />
             <Route path="/login" element={<Login />} />
@@ -33,7 +56,9 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>
+      
       </Router>
+      
       <Footer/>
     </ApolloProvider>
   );
