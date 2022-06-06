@@ -1,2 +1,7 @@
-web: npm run start && node Server/server.js
+
+
+
+
+
+web: node src/server.js
 

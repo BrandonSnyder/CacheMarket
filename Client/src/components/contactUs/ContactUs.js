@@ -5,10 +5,12 @@ import carringtonpic from "./profPics/carrington.jpg";
 import fisherpic from "./profPics/fisher.jpg";
 import lamontpic from "./profPics/Lamont.jpg";
 import {BsHeart, BsTrash, BsGithub,BsLinkedin} from "react-icons/bs";
+import chalk from 'chalk';
 // import { useQuery } from "@apollo/client";
 // import { QUERY_ITEMS } from "../utils/queries";
 
 const ContactUs = () => {
+  console.log(chalk.blue('Hello world!'));
   return (
     <section className="contactUsContainer">
       <h1>Contact Us</h1>

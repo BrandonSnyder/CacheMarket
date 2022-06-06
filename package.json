@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+
     
     "start": "cd server && npm start",
     "seed": "node server/seeds/seed.js",
@@ -11,6 +12,7 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "front-end": "cd client && npm run start",
     "deploy": "npm run start && npm run front-end"
+
 
   },
   "author": "",
