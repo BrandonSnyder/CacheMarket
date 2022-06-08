@@ -17,14 +17,13 @@ function CreatePostForm() {
 
   const handlePostSubmit = async (event) => {
     event.preventDefault();
-    try {
+    event.preventDefault();
+    
       const { data } = addItem({
         variables: { ...postState },
       });
-      window.location.reload();
-    } catch (err) {
-      console.error("not submitting");
-    }
+      window.location.assign = ("/");
+      
   };
 
   const handlePostChange = (event) => {
