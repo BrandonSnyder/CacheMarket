@@ -2,6 +2,7 @@ import React from "react";
 import Auth from "../../utils/auth";
 import "./Navbar.css";
 import logo from "./fingerlogo2.png";
+import { Link } from "react-router-dom";
 
 function CacheNav() {
   if (Auth.loggedIn()) {
@@ -17,16 +18,16 @@ function CacheNav() {
                 </h1>
               </div>
               <nav className=" navBarLinkContainer">
-                <a className="navbarLink" href="/">
+                <Link className="navbarLink" to="/">
                   Home
-                </a>
+                </Link>
                 
-                <a className="navbarLink" href="/contact-us">
+                <Link className="navbarLink" to="/contact-us">
                   Contact Us
-                </a>
-                <a className="navbarLink" href="/create-post">
+                </Link>
+                <Link className="navbarLink" to="/create-post">
                   New Post
-                </a>
+                </Link>
                 <div className="Cart-container">
       <div className="Cart-parent">
         <div>
@@ -96,21 +97,21 @@ function CacheNav() {
                 </h1>
               </div>
               <nav className=" navBarLinkContainer">
-                <a className="navbarLink" href="/">
+                <Link className="navbarLink" to="/">
                   Home
-                </a>
-                <a className="navbarLink" href="/login">
+                </Link>
+                <Link className="navbarLink" to="/login">
                   Login
-                </a>
-                <a className="navbarLink" href="/signup">
+                </Link>
+                <Link className="navbarLink" to="/signup">
                   Sign Up
-                </a>
-                <a className="navbarLink" href="/contact-us">
+                </Link>
+                <Link className="navbarLink" to="/contact-us">
                   Contact Us
-                </a>
-                <a className="navbarLink" href="/create-post">
+                </Link>
+                <Link className="navbarLink" to="/create-post">
                   New Post
-                </a>
+                </Link>
                 
               </nav>
             </section>
