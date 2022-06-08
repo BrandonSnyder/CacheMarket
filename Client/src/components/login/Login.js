@@ -23,7 +23,7 @@ function LoginForm() {
       });     
       const token = variable;
       Auth.login(token);
-      window.location.reload();
+      window.location.assign = ("/");
   };
 
   const handleChange = (event) => {
