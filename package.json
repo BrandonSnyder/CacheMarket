@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "cd Client && npm run build",
+    "install": "cd Server && npm install && cd ../Client && npm install",
     "start": "node Server/server.js Client/src/index.js",
     "seed": "node server/seeds/seed.js",
     "watch": "nodemon server.js",
