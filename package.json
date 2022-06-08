@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && npm run build",
     "start": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
     "seed": "node server/seeds/seed.js",
     "watch": "nodemon server.js",
