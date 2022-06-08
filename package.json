@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd Client && npm run build",
-    "start": "concurrently \"cd Server && npm run start\" \"cd Client && npm start\"",
+    "build": "cd client && npm run build",
+    "start": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
     "seed": "node server/seeds/seed.js",
     "watch": "nodemon server.js",
-    "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm start\""
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
   },
   "author": "",
   "license": "ISC",
