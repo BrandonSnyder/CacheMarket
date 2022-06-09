@@ -47,6 +47,9 @@ function App() {
       
         <div className="flex-column justify-center align-center min-100-vh ">
         <CacheNav />
+        <div className="main">
+          
+        
           <Routes>            
             <Route path="/" element={<Market />} />
             <Route path="/login" element={<Login />} />
@@ -55,7 +58,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             
           </Routes>
-          
+        </div>  
         </div>
       
       </Router>
