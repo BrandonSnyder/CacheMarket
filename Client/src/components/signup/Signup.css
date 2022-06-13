@@ -50,4 +50,31 @@ span{
     width: 100px;
     margin: 10px auto 0 ;
 }
+@media only screen and (max-width: 800px) {
+    .signupContainer{
+        width: 90%;
+    }
+    .signupContainer h1{
+        font-size: 40px;
+    }
+    .signupForm{
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;        
+        box-shadow: none;
+    }
+    .signupForm .input{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0px 5px 5px;
+        align-items: center;
+        padding: 0;
+        
+    };
+    
+    
+
+
+}
 

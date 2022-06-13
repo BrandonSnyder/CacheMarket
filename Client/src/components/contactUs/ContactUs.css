@@ -95,3 +95,23 @@ filter: grayscale(100%);
     background-color:#FABC65;
     filter: none;
 }
+@media only screen and (max-width: 800px) {
+
+    .contactCardsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0px auto;
+        padding: 0;
+    }
+    .contactCard{
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .contactCard:hover{
+        width: 100%;
+    }
+
+
+}

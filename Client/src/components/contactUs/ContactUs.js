@@ -13,17 +13,7 @@ const ContactUs = () => {
     <section className="contactUsContainer">
       <h1>Contact Us</h1>
       <div className="contactCardsContainer">
-        <div className="contactCard Fisher">
-        <h3>Fisher Davis</h3>
-        <img src={fisherpic} alt="profile picture"/>
-              <div className="LinkDiv">
-              <a id="github" href="https://github.com/Fisher-Davis"><BsGithub/></a>
-              <a href="https://www.linkedin.com/in/fisher-davis-562182180/"><BsLinkedin/></a>
-              </div>
-            
-          <h5 className="contactUsDescription">My name is Fisher Davis and I am a newcomer in the field of web design and tech. I have a strong dedication for learning new web design trends and keeping up with the industry.</h5>
-        </div>
-        <div className="contactCard Brandon">
+      <div className="contactCard Brandon">
           <h3>Brandon Snyder</h3>
           <img src={brandonpic} alt="profile picture"/>
           <div className="LinkDiv">
@@ -37,6 +27,17 @@ const ContactUs = () => {
             software project management.
           </h5>
         </div>
+        <div className="contactCard Fisher">
+        <h3>Fisher Davis</h3>
+        <img src={fisherpic} alt="profile picture"/>
+              <div className="LinkDiv">
+              <a id="github" href="https://github.com/Fisher-Davis"><BsGithub/></a>
+              <a href="https://www.linkedin.com/in/fisher-davis-562182180/"><BsLinkedin/></a>
+              </div>
+            
+          <h5 className="contactUsDescription">My name is Fisher Davis and I am a newcomer in the field of web design and tech. I have a strong dedication for learning new web design trends and keeping up with the industry.</h5>
+        </div>
+        
         <div className="contactCard Lamont">
         <h3>Lamont Barnett</h3>
         <img src={lamontpic} alt="profile picture"/>

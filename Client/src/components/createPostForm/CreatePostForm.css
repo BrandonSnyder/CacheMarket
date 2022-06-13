@@ -124,3 +124,61 @@ span{
     background-color: var(--secondary);
 }
 /* End of CreatePostForm */
+@media only screen and (max-width: 800px) {
+    .createPostContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+        margin: 10px auto;
+    }
+    .leftContainer{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .leftContainer h1,.rightContainer h1{
+        font-size: 30px;
+        margin: 0;
+    }
+    .createPostForm .input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+    .rightContainer{
+        width: 100%;
+        margin: 40px 0; 
+    }
+    .createCard{
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    .createCard img{
+        max-height: 150px;
+        padding: 0;
+        margin: 5px auto;
+    }
+    .createCard h5{
+        margin: 0;
+    }
+    .btnContainer{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        justify-content: space-around;
+    }
+    .btnContainer button{
+        width: auto;
+        margin: 10px 0 ;
+    }
+    
+
+    
+
+
+}

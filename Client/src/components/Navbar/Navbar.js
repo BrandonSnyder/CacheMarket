@@ -12,7 +12,7 @@ function CacheNav() {
           <nav className="navbar" variant="dark">
             <section className="navbarContainer">
               <div className="logoName">
-                <img src={logo} alt="logo" />
+                <img className="navbarLogo" src={logo} alt="logo" />
                 <h1 className="navbarTitle" href="">
                   CacheMarket
                 </h1>

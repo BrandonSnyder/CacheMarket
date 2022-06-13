@@ -73,3 +73,26 @@
     transition: .5s;
     border: 1px solid var(--highlight);
 }
+
+@media only screen and (max-width: 800px) {
+    .navbar{
+        width: 100%;
+        margin: auto;
+    }
+    .navbarContainer{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logoName img{
+        height: 30px;
+    }
+    .navbarTitle{
+        font-size: 20px;
+    }
+    .navbarLink{
+        font-size: 10px;
+    }
+  
+  }

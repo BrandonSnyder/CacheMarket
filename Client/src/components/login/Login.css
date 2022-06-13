@@ -52,3 +52,28 @@ span{
 
 
 /* End of CreatePostForm */
+@media only screen and (max-width: 800px) {
+    .loginContainer{
+        width: 90%;
+        padding: 15px;
+    }
+    .loginForm{
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+
+    }
+    .loginInput{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 5px 0;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .loginInput input{
+        width: 90%;
+    }
+
+
+}
