@@ -7,7 +7,7 @@ import {
 } from "@apollo/client";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import Market from "./pages/Market";
+import Market from "./components/Market/Market";
 import CreatePostForm from "./components/createPostForm/CreatePostForm";
 import LikedItems from "./components/likedItems/LikedItems";
 import CacheNav from "./components/Navbar/Navbar.js";

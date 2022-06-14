@@ -2,10 +2,10 @@ import React from "react";
 import { useQuery, useMutation, useState} from "@apollo/client";
 import { QUERY_ITEMS } from "../../utils/queries";
 import { REMOVE_ITEM } from "../../utils/mutations";
-import "./style.css";
+import "./Market.css"; 
 import {BsHeart, BsTrash} from "react-icons/bs";
 import Auth from '../../utils/auth';
-import LikedItems from "../../components/likedItems/LikedItems";
+import LikedItems from "../likedItems/LikedItems";
 
 
 function Market() {
